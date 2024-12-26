@@ -1,6 +1,6 @@
 1. Go to old domain zip wp-content folder and download it.
 
-2. Export database
+2. Export database.
 
 3. Goto wp-config.php file, copy and save table prefix.For Example: $table_prefix = wpiy_
 
