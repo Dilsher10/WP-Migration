@@ -1,3 +1,25 @@
+1. Go to old domain zip wp-content folder and download it.
+
+2. Export database
+
+3. Goto wp-config.php file, copy and save table prefix.For Example: $table_prefix = wpiy_
+
+4. Login into new domain and install new Wordpress.
+
+5. For install Wordpress, goto Softaculous Apps Installer, Goto Wordpress Manager and click install.
+
+6. Fillout the fields, select domain/sub-domain and must to replace table prefix with your old domain which you copied form wp-config.php file and last click intall.
+
+7. Delete wp-content folder of new domain.
+
+8. Upload wp-content folder of old domain.
+
+9. Empty database of new wordpress and import old domain database file.
+
+10. Update website links. goto google and type "find and replace multiple text online". Online Tool Link: https://www.joydeepdeb.com/tools/find-replace.html
+
+
+
 update prefix_options set option_value= REPLACE(option_value,'oldwebsiteurl','newwebsiteurl');
 
 update prefix_posts set guid = REPLACE(guid,'oldwebsiteurl','newwebsiteurl');
@@ -10,12 +32,6 @@ update prefix_users set user_email = REPLACE(user_email,'oldwebsiteurl','newwebs
 
 
 
-Tool: find and replace multiple text online
-
-https://www.joydeepdeb.com/tools/find-replace.html
-
-
-
 Website Name: The Leather State
 
 Table Prefix: wpiy_
@@ -23,3 +39,7 @@ Table Prefix: wpiy_
 Old Domain: leather.codeanddesigngroup.com
 
 New Domain: leather.infocodeanddesigngroup.com
+
+
+
+11. Copy the updated data and goto phpMySQL, paste in SQL and click on go.
